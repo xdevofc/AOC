@@ -29,7 +29,8 @@ func CalcWrap(L int, A int, H int) int {
 func main() {
 	// almacenando el papel necesario
 	var totalWrap int = 0
-
+	// calcular la cina necesaria
+	var totalRibbon int = 0
 	// leer el archivo y extraer los datos
 	var fileName string = "input.txt"
 
@@ -67,20 +68,20 @@ func main() {
 
 		//imprimiendo la linea
 
-		//  fmt.Println("Linea: ", line)
+		fmt.Println("Linea: ", line)
 
 		// calculando cuanto papel por regalo
 		res := CalcWrap(L, A, H)
-
+		res2 := SecondChallenge(L, A, H)
 		totalWrap = res + totalWrap
-
+		totalRibbon = res2 + totalRibbon
 	}
 
 	fmt.Printf("Total Wrap:%d \n", totalWrap)
+	fmt.Printf("Total Ribbon:%d \n", totalRibbon)
 
 	if err := scanner.Err(); err != nil {
 		fmt.Println("Error reading file: ", err)
 	}
 
-	//SecondChallenge()
 }
