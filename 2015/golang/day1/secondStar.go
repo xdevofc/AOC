@@ -36,22 +36,24 @@ func ReadInput2() {
 			pasos_der++
 		} else {
 			fmt.Printf("index: %d\n", i)
-		}
+            
+        }
+        
+        // calculando en que piso esta
+        // en el loop de arriba, la i almacena el index, empezando por el 0
+        // por eso al retornar el valor le +1
 
+
+       pasos_final = pasos_izq - pasos_der
+       
+       if pasos_final == -1 {
+            fmt.Printf("La posicion en la que va al subsuelo es: %d\n", i+1)
+            return
+       }
 	}
+	
+	//fmt.Printf("Pasos hacia la izq: %d\n", pasos_izq)
+	//fmt.Printf("Pasos hacia la der: %d\n", pasos_der)
+	//fmt.Printf("Esta en el piso: %d\n", pasos_final)
 
-	//calcular el piso
-	if pasos_izq > pasos_der {
-		pasos_final = pasos_izq - pasos_der
-	} else if pasos_der > pasos_izq {
-		pasos_final = pasos_der - pasos_izq
-	} else {
-		pasos_final = 0
-	}
-
-	fmt.Printf("Pasos hacia la izq: %d\n", pasos_izq)
-	fmt.Printf("Pasos hacia la der: %d\n", pasos_der)
-	fmt.Printf("Esta en el piso: %d\n", pasos_final)
-
-	fmt.Println("HOLAAA\n")
 }
