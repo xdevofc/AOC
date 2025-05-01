@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func ReadInput() {
+func ReadInput2() {
 
 	// creando los contadores de pasos y resultado
 	var pasos_izq int = 0
@@ -35,7 +35,7 @@ func ReadInput() {
 		} else if c == ')' {
 			pasos_der++
 		} else {
-			fmt.Println("type %s posicion: %d", c, i)
+			fmt.Printf("index: %d\n", i)
 		}
 
 	}
@@ -52,8 +52,6 @@ func ReadInput() {
 	fmt.Printf("Pasos hacia la izq: %d\n", pasos_izq)
 	fmt.Printf("Pasos hacia la der: %d\n", pasos_der)
 	fmt.Printf("Esta en el piso: %d\n", pasos_final)
-}
 
-func main() {
-	ReadInput()
+	fmt.Println("HOLAAA\n")
 }
