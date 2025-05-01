@@ -5,6 +5,6 @@ import (
 )
 
 func main (){
-    fmt.Println("Hello world day3")
+    fmt.Println("TESTING world day3")
     SecondChallenge()
 }
