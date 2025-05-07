@@ -32,7 +32,7 @@ func main(){
 		decrypt := hex.EncodeToString(hash[:])
 
 
-		if strings.HasPrefix(decrypt, "00000"){
+		if strings.HasPrefix(decrypt, "000000"){
 			
 			fmt.Printf("La clave es: %v\n ", decrypt)
 			fmt.Printf("El numero es: %v\n ", numero)
