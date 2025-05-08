@@ -4,20 +4,19 @@ import (
 	"strings"
 )
 
-var count_vowels = 0
-
 func VowelsPresent(line string) bool {
 
+	count_vowels := 0
 	for _, vowel := range Vowels {
 		if strings.Contains(line, vowel) {
-			count_vowels += 1
+			times_vowel := strings.Count(line, vowel)
+			count_vowels += times_vowel
 		}
 	}
 
 	if count_vowels >= 3 {
 		return true
 	} else {
-		count_vowels = 0
 		return false
 	}
 }
