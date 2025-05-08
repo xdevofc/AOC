@@ -8,7 +8,6 @@ import (
 )
 
 func main() {
-
 	// leyendo un archivo
 	fileName := "input.txt"
 
