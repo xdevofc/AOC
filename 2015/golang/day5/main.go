@@ -2,14 +2,13 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"fmt"
 	"os"
-	"bytes"
 )
 
+func main() {
 
-func main(){
-	
 	// leyendo un archivo
 	fileName := "input.txt"
 
@@ -26,12 +25,12 @@ func main(){
 	file_scanner := bufio.NewScanner(reader)
 
 	//imprimir linea a linea
-	// TODO [-] FUNCTION TO MATCH TE REQUIREMENTS
 
-
-	for file_scanner.Scan(){
+	// leyendo linea a linea
+	for file_scanner.Scan() {
 		linea := file_scanner.Text()
-		fmt.Println(linea)
+
+		IsNice(linea)
 	}
 
 	// en el caso de que no se pueda leer
@@ -39,16 +38,7 @@ func main(){
 		fmt.Println("Error al leer: ", err)
 	}
 
-
-
-
-	fmt.Println("%v", data)
-
-
 	//content := string(data)
 
-
-
 	//fmt.Println("%v",content)
-	fmt.Println("%v",Vowels)
 }

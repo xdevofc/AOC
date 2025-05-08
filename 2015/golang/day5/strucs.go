@@ -7,4 +7,3 @@ var Prohib = []string{"ab","cd","pq","xy"}
 
 
 
-
