@@ -22,14 +22,16 @@ func SetValues(action string, iniciox string, inicioy string, finx string, finy 
 		// prendiendo las luces
 		for i := x1; i <= x2; i++ {
 			for j := y1; j <= y2; j++ {
-				Matrix[i][j] = true
+				Matrix[i][j] += 1
 			}
 		}
 	} else if action == "turn off" {
 		// apagando las luces
 		for i := x1; i <= x2; i++ {
 			for j := y1; j <= y2; j++ {
-				Matrix[i][j] = false
+				if Matrix[i][j] > 0 {
+					Matrix[i][j] -= 1
+				}
 			}
 		}
 
@@ -37,7 +39,7 @@ func SetValues(action string, iniciox string, inicioy string, finx string, finy 
 		// cambiando los valoreslas luces
 		for i := x1; i <= x2; i++ {
 			for j := y1; j <= y2; j++ {
-				Matrix[i][j] = !Matrix[i][j]
+				Matrix[i][j] += 2
 			}
 
 		}

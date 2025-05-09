@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-var Matrix [1000][1000]bool
+var Matrix [1000][1000]int
 
 func main() {
 
@@ -43,7 +43,11 @@ func main() {
 
 	// 568658 -> Too low
 	// 569004 -> Too low
-	// 569999 ->
+	// 569999 -> right
+
+	// second part
+	// 17325717 -> too low
+	// 17836115 -> right answer
 	fmt.Printf("Luces Prendidas: %v \n", ligthsOn)
 
 }
