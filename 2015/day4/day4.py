@@ -3,7 +3,7 @@ import hashlib
 input = 'yzbqklnj' 
 example = 'abcdef'
 flag = True 
-number = 0
+number = 282749
 test = ""
 
 
@@ -12,8 +12,8 @@ while ( flag ):
 
     test = input + str(number)
     res = hashlib.md5(test.encode("UTF-8"))
-    first_digits = res.hexdigest()[:5]
-    if ( first_digits != '00000' ):
+    first_digits = res.hexdigest()[:6]
+    if ( first_digits != '000000' ):
         print("digits: ", first_digits)
         number += 1 
     else: 
